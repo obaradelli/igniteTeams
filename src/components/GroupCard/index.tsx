@@ -1,9 +1,9 @@
-import { TouchableHighlightProps } from "react-native";
-import { Container, Title, Icon } from "./styles";
+import { TouchableHighlightProps } from 'react-native'
+import { Container, Title, Icon } from './styles'
 
 type Props = TouchableHighlightProps & {
-  title: string;
-};
+  title: string
+}
 
 export function GroupCard({ title, ...rest }: Props) {
   return (
@@ -11,5 +11,5 @@ export function GroupCard({ title, ...rest }: Props) {
       <Icon />
       <Title>{title}</Title>
     </Container>
-  );
+  )
 }

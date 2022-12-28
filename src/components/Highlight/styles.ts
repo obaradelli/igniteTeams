@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components/native";
+import styled, { css } from 'styled-components/native'
 
 export const Container = styled.View`
   ${({ theme }) => css`
@@ -6,7 +6,7 @@ export const Container = styled.View`
 
     margin: 32px 0;
   `}
-`;
+`
 
 export const Title = styled.Text`
   ${({ theme }) => css`
@@ -17,7 +17,7 @@ export const Title = styled.Text`
 
     color: ${theme.COLORS.WHITE};
   `}
-`;
+`
 
 export const SubTitle = styled.Text`
   ${({ theme }) => css`
@@ -28,4 +28,4 @@ export const SubTitle = styled.Text`
 
     color: ${theme.COLORS.GRAY_300};
   `}
-`;
+`

@@ -1,11 +1,11 @@
-import { Container, Logo, BackIcon, BackButton } from "./styles";
+import { Container, Logo, BackIcon, BackButton } from './styles'
 
-import logoImg from "@assets/logo.png";
-import { CaretLeft } from "phosphor-react-native";
+import logoImg from '@assets/logo.png'
+import { CaretLeft } from 'phosphor-react-native'
 
 type Props = {
-  showBackButton?: boolean;
-};
+  showBackButton?: boolean
+}
 
 export function Header({ showBackButton = false }: Props) {
   return (
@@ -17,5 +17,5 @@ export function Header({ showBackButton = false }: Props) {
       )}
       <Logo source={logoImg} />
     </Container>
-  );
+  )
 }
