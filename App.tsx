@@ -2,27 +2,30 @@ import {
   useFonts,
   Roboto_400Regular,
   Roboto_700Bold,
-} from "@expo-google-fonts/roboto";
+} from '@expo-google-fonts/roboto'
 
-import { ThemeProvider } from "styled-components";
-import theme from "./src/theme";
+import { ThemeProvider } from 'styled-components'
+import theme from './src/theme'
 
-import { StatusBar } from "react-native";
-import { Groups } from "@screens/Groups";
-import { NewGroup } from "@screens/NewGroup";
-import { Loading } from "@components/Loading";
+import { StatusBar } from 'react-native'
+
+import { Groups } from '@screens/Groups'
+import { NewGroup } from '@screens/NewGroup'
+import { Players } from '@screens/Players'
+
+import { Loading } from '@components/Loading'
 
 export default function App() {
-  const [fonstLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
+  const [fonstLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold })
 
   return (
     <ThemeProvider theme={theme}>
       <StatusBar
-        barStyle={"light-content"}
+        barStyle={'light-content'}
         backgroundColor="transparent"
         translucent
       />
-      {fonstLoaded ? <NewGroup /> : <Loading />}
+      {fonstLoaded ? <Players /> : <Loading />}
     </ThemeProvider>
-  );
+  )
 }
