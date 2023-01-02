@@ -9,7 +9,7 @@
       "@routes/*": ["./src/routes/*"],
       "@screens/*": ["./src/screens/*"],
       "@storage/*": ["./src/storage/*"],
-      "@utlis/*": ["./src/utlis/*"]
+      "@utils/*": ["./src/utils/*"]
     }
   }
 }
