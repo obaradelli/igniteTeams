@@ -12,7 +12,9 @@ export async function playerAddByGroup(
     const storedPlayers = await playersGetByGroup(group)
 
     const playerAlreadyExists = storedPlayers.filter(
-      (player) => player.name === newPlayer.name
+      (player) =>
+        player.name.toUpperCase() === newPlayer.name.toUpperCase() &&
+        player.team === newPlayer.team
     )
 
     if (playerAlreadyExists.length > 0) {

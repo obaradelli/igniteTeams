@@ -48,7 +48,7 @@ export function Players() {
       )
     }
 
-    const newPlayer = { name: newPlayerName, team }
+    const newPlayer = { name: newPlayerName.trim(), team }
 
     try {
       await playerAddByGroup(newPlayer, group)
@@ -71,12 +71,13 @@ export function Players() {
       setIsLoading(true)
       const playersByTeam = await playersGetByGroupAndTeam(group, team)
       setPlayers(playersByTeam)
-      setIsLoading(false)
     } catch (error) {
       Alert.alert(
         'Pessoas',
         'Não foi possível carregas as pessoas do time selecinado.'
       )
+    } finally {
+      setIsLoading(false)
     }
   }
 

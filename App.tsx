@@ -1,5 +1,5 @@
 import { StatusBar } from 'react-native'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider, useTheme } from 'styled-components'
 
 import { Routes } from '@routes/index'
 import { Groups } from '@screens/Groups'
@@ -21,7 +21,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <StatusBar
         barStyle={'light-content'}
-        backgroundColor="transparent"
+        backgroundColor="#202024"
         translucent
       />
       {fonstLoaded ? <Routes /> : <Loading />}
